@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumia - Menü</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="photos/vişne-Photoroom.png-Photoroom.png">
+    <style>
+        .card-header {
+            cursor: pointer;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .add-to-cart-btn {
+            margin-left: auto;
+        }
+        .navbar {
+            background-color: #594A47;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+           
+         
+            color: #FFF6EE !important;
+        }
+        .navbar-nav .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: #FFF6EE !important;
+            padding: 0.5rem 1rem;
+            margin-right: 0.5rem;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
+            position: relative;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #594A47 !important;
+            background-color: #b29e84;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: #FFF6EE;
+            transition: width 0.3s;
+        }
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler:focus, .navbar-toggler:active {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Lumia Cafe & Dessert & Breakfast</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="menu.html">Menü <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sepetiniz.html">Sepetiniz</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <select class="form-control" id="tableSelect">
+                    <option value="">Masa Seçiniz</option>
+                    <option value="M-1">M-1</option>
+                    <option value="M-2">M-2</option>
+                    <option value="M-3">M-3</option>
+                    <option value="M-4">M-4</option>
+                    <option value="M-5">M-5</option>
+                    <option value="M-6">M-6</option>
+                    <!-- Diğer masa seçenekleri buraya eklenebilir -->
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="accordion" id="menuAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h2 class="mb-0">
+                        İçecekler
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#menuAccordion">
+                    <div class="card-body">
+                        <div class="menu-item" data-name="Çay" data-price="10">
+                            <img src="photos/cay.jpg" alt="İçecek 1">
+                            <div>
+                                <h5>Çay</h5>
+                                <p>Fiyat: 10 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Türk Kahvesi" data-price="40">
+                            <img src="photos/kahvee.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Türk Kahvesi</h5>
+                                <p>Fiyat: 40 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Meyve Suyu" data-price="30">
+                            <img src="photos/sikma-meyve-suyu.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Meyve Suyu</h5>
+                                <p>Fiyat: 30 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Sahlep" data-price="45">
+                            <img src="photos/sahlp.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Sahlep</h5>
+                                <p>Fiyat: 45 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Milkshake" data-price="80">
+                            <img src="photos/milkshake.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Milkshake</h5>
+                                <p>Fiyat: 80 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Latte" data-price="75">
+                            <img src="photos/latte.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Latte</h5>
+                                <p>Fiyat: 75 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Americano" data-price="65">
+                            <img src="photos/americano.jpg" alt="İçecek 2">
+                            <div>
+                                <h5>Americano</h5>
+                                <p>Fiyat: 65 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <!-- Diğer içecekler buraya gelecek -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h2 class="mb-0">
+                        Tatlılar
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#menuAccordion">
+                    <div class="card-body">
+                        <div class="menu-item" data-name="Tiramisu" data-price="80">
+                            <img src="photos/tiramisu.jpg" alt="Tatlı 1">
+                            <div>
+                                <h5>Tiramisu</h5>
+                                <p>Fiyat: 80 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cheesecake" data-price="60">
+                            <img src="photos/cheesecake.jpg" alt="Tatlı 2">
+                            <div>
+                                <h5>Cheescake</h5>
+                                <p>Fiyat: 60 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Trileçe" data-price="90">
+                            <img src="photos/trilece.jpg" alt="Tatlı 2">
+                            <div>
+                                <h5>Trileçe</h5>
+                                <p>Fiyat: 90 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Mono Latte" data-price="105">
+                            <img src="photos/monolatte.jpg" alt="Tatlı 2">
+                            <div>
+                                <h5>Mono Latte</h5>
+                                <p>Fiyat: 105 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Profiterollu Pasta" data-price="105">
+                            <img src="photos/profiterol.jpeg" alt="Tatlı 2">
+                            <div>
+                                <h5>Profiterollu Pasta</h5>
+                                <p>Fiyat: 105 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Sufle" data-price="60">
+                            <img src="photos/sufle.jpeg" alt="Tatlı 2">
+                            <div>
+                                <h5>Sufle</h5>
+                                <p>Fiyat: 60 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <!-- Diğer tatlılar buraya gelecek -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h2 class="mb-0">
+                        Kahvaltı
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#menuAccordion">
+                    <div class="card-body">
+                        <div class="menu-item" data-name="Açma" data-price="25">
+                            <img src="photos/acma.jpg" alt="Kahvaltı 1">
+                            <div>
+                                <h5>Açma</h5>
+                                <p>Fiyat: 25 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Gevrek" data-price="30">
+                            <img src="photos/gevrek.jpeg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>Gevrek</h5>
+                                <p>Fiyat: 30 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Kaşarlı Tost" data-price="60">
+                            <img src="photos/kasarlii.jpeg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>Kaşarlı Tost</h5>
+                                <p>Fiyat: 60 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Karışık Tost" data-price="75">
+                            <img src="photos/karisik.jpeg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>Karışık Tost</h5>
+                                <p>Fiyat: 75 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Sandviç" data-price="40">
+                            <img src="photos/sandvic.jpg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>Sandviç</h5>
+                                <p>Fiyat: 40 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="İzmir Kumru" data-price="120">
+                            <img src="photos/kumru.jpeg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>İzmir Kumru</h5>
+                                <p>Fiyat: 120 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Serpme Kahvaltı (2 Kişilik)" data-price="600">
+                            <img src="photos/serpme.jpg" alt="Kahvaltı 2">
+                            <div>
+                                <h5>Serpme Kahvaltı (2 Kişilik)</h5>
+                                <p>Fiyat: 600 TL</p>
+                                <button class="btn btn-primary add-to-cart-btn">Sepete Ekle</button>
+                            </div>
+                        </div>
+                        <!-- Diğer kahvaltılar buraya gelecek -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Sayfa yüklendiğinde masa seçimini kontrol et
+            var selectedTable = localStorage.getItem('selectedTable');
+            if (selectedTable) {
+                $('#tableSelect').val(selectedTable);
+            }
+    
+            // Masa seçildiğinde
+            $('#tableSelect').change(function() {
+                var table = $(this).val();
+                localStorage.setItem('selectedTable', table);
+                alert('Masa seçimi kaydedildi!');
+            });
+        });
+    </script>
+    <script>
+        // Sepete ekle düğmesi tıklandığında
+        $(document).on('click', '.add-to-cart-btn', function() {
+            // Ürün adını ve fiyatını al
+            var itemName = $(this).closest('.menu-item').data('name');
+            var itemPrice = $(this).closest('.menu-item').data('price');
+
+            // Sepet bilgilerini al
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Yeni ürünü sepete ekle
+            cart.push({
+                name: itemName,
+                price: itemPrice
+            });
+
+            // Güncellenmiş sepeti localStorage'e kaydet
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Kullanıcıyı bilgilendir
+            alert('Ürün sepete eklendi!');
+        });
+    </script>
+</body>
+</html>
